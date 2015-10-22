@@ -19,6 +19,8 @@ namespace XamarinPushDemo
         //Mobile Service Client reference
         private MobileServiceClient client;
 
+		private MobileServiceUser user;
+
         //Mobile Service sync table used to access data
         private IMobileServiceSyncTable<ToDoItem> toDoTable;
 
