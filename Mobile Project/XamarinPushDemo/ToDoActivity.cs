@@ -12,8 +12,7 @@ using System.IO;
 
 namespace XamarinPushDemo
 {
-    [Activity (MainLauncher = true, 
-               Icon="@drawable/ic_launcher", Label="@string/app_name",
+    [Activity (Icon="@drawable/ic_launcher", Label="@string/app_name",
                Theme="@style/AppTheme")]
     public class ToDoActivity : Activity
     {
