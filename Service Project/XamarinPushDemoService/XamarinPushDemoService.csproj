@@ -185,9 +185,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CustomLoginController.cs" />
+    <Compile Include="Controllers\CustomRegistrationController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="CustomLoginProvider.cs" />
+    <Compile Include="CustomLoginProviderUtils.cs" />
+    <Compile Include="CustomLoginResult.cs" />
+    <Compile Include="DataObjects\Account.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="LoginRequest.cs" />
     <Compile Include="Models\XamarinPushDemoContext.cs" />
+    <Compile Include="RegistrationRequest.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
