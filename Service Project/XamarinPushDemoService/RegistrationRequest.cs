@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XamarinPushDemoService
 {
-    class RegistrationRequest
+    public class RegistrationRequest
     {
         public String username { get; set; }
         public String password { get; set; }

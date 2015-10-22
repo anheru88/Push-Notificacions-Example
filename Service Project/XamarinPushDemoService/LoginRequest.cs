@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XamarinPushDemoService
 {
-    class LoginRequest
+    public class LoginRequest
     {
         public String username { get; set; }
         public String password { get; set; }
