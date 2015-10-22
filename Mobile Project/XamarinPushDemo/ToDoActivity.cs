@@ -30,9 +30,6 @@ namespace XamarinPushDemo
         //EditText containing the "New ToDo" text
         private EditText textNewToDo;
 
-        const string applicationURL = @"https://xamarinpushdemo.azure-mobile.net/";
-        const string applicationKey = @"REpumKGpyqaQgKSzmrBgQqsQWKTQrF23";
-
         const string localDbFilename = "localstore.db";
 
         protected override async void OnCreate (Bundle bundle)
@@ -46,7 +43,7 @@ namespace XamarinPushDemo
 
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL and key
-            client = new MobileServiceClient (applicationURL, applicationKey);
+			client = new MobileServiceClient (AppConstant.applicationURL, AppConstant.applicationKey);
             await InitLocalStoreAsync();
 
             // Get the Mobile Service sync table instance to use

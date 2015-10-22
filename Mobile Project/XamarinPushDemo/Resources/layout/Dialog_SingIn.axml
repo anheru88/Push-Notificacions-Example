@@ -5,6 +5,17 @@
     android:layout_height="fill_parent"
     android:minWidth="300dp"
     android:minHeight="200dp">
+    <TextView
+        android:text="Sign In"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:textColor="#368DEB"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginBottom="0.0dp"
+        android:layout_marginTop="10dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

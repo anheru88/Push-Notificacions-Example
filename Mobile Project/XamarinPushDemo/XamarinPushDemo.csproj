@@ -86,6 +86,11 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Dialog_Sing_Up.cs" />
     <Compile Include="Dialog_Sing_In.cs" />
+    <Compile Include="AppConstant.cs" />
+    <Compile Include="LoginRequest.cs" />
+    <Compile Include="CustomLoginResult.cs" />
+    <Compile Include="RegistrationRequest.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
