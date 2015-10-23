@@ -20,7 +20,6 @@ namespace XamarinPushDemo
 
 		static ToDoActivity instance = new ToDoActivity();
 
-
         //Mobile Service Client reference
 		public MobileServiceClient client { get; private set; }
 
@@ -55,6 +54,16 @@ namespace XamarinPushDemo
 			user.MobileServiceAuthenticationToken = Intent.GetStringExtra("UserToken");
 
 			client.CurrentUser = user;
+
+			// Set the current instance of TodoActivity.
+			instance = this;
+
+			// Make sure the GCM client is set up correctly.
+			GcmClient.CheckDevice(this);
+			GcmClient.CheckManifest(this);
+
+			// Register the app for push notifications.
+			GcmClient.Register(this, ToDoBroadcastReceiver.senderIDs);
 
             // Get the Mobile Service sync table instance to use
             toDoTable = client.GetSyncTable <ToDoItem> ();
