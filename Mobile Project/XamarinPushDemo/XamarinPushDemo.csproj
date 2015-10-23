@@ -93,6 +93,7 @@
     <Compile Include="LoginRequest.cs" />
     <Compile Include="CustomLoginResult.cs" />
     <Compile Include="RegistrationRequest.cs" />
+    <Compile Include="ToDoBroadcastReceiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

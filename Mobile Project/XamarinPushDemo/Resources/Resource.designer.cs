@@ -26,6 +26,7 @@ namespace XamarinPushDemo
 		
 		public static void UpdateIdValues()
 		{
+			global::Gcm.Client.Resource.String.library_name = global::XamarinPushDemo.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -174,23 +175,26 @@ namespace XamarinPushDemo
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040003
+			public const int add_button_text = 2130968579;
+			
 			// aapt resource value: 0x7f040002
-			public const int add_button_text = 2130968578;
+			public const int add_textbox_hint = 2130968578;
 			
 			// aapt resource value: 0x7f040001
-			public const int add_textbox_hint = 2130968577;
+			public const int app_name = 2130968577;
+			
+			// aapt resource value: 0x7f040006
+			public const int checkbox_text = 2130968582;
 			
 			// aapt resource value: 0x7f040000
-			public const int app_name = 2130968576;
+			public const int library_name = 2130968576;
 			
 			// aapt resource value: 0x7f040005
-			public const int checkbox_text = 2130968581;
+			public const int menu_refresh = 2130968581;
 			
 			// aapt resource value: 0x7f040004
-			public const int menu_refresh = 2130968580;
-			
-			// aapt resource value: 0x7f040003
-			public const int mobile_services = 2130968579;
+			public const int mobile_services = 2130968580;
 			
 			static String()
 			{
