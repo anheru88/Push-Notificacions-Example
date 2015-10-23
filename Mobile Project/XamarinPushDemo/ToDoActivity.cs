@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 using Microsoft.WindowsAzure.MobileServices.SQLiteStore;
 using System.IO;
+using Gcm.Client;
 
 namespace XamarinPushDemo
 {
@@ -16,8 +17,12 @@ namespace XamarinPushDemo
                Theme="@style/AppTheme")]
     public class ToDoActivity : Activity
     {
+
+		static ToDoActivity instance = new ToDoActivity();
+
+
         //Mobile Service Client reference
-        private MobileServiceClient client;
+		public MobileServiceClient client { get; private set; }
 
 		private MobileServiceUser user;
 
@@ -199,6 +204,23 @@ namespace XamarinPushDemo
             builder.SetTitle (title);
             builder.Create ().Show ();
         }
+
+		// Return the current activity instance.
+		public static ToDoActivity CurrentActivity
+		{
+			get
+			{
+				return instance;
+			}
+		}
+		// Return the Mobile Services client.
+		public MobileServiceClient CurrentClient
+		{
+			get
+			{
+				return client;
+			}
+		}
     }
 }
 
