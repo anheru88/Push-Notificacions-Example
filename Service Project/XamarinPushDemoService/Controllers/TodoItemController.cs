@@ -7,6 +7,8 @@ using Microsoft.WindowsAzure.Mobile.Service;
 using XamarinPushDemoService.DataObjects;
 using XamarinPushDemoService.Models;
 using Microsoft.WindowsAzure.Mobile.Service.Security;
+using System;
+using System.Collections.Generic;
 
 namespace XamarinPushDemoService.Controllers
 {
@@ -42,6 +44,23 @@ namespace XamarinPushDemoService.Controllers
         public async Task<IHttpActionResult> PostTodoItem(TodoItem item)
         {
             TodoItem current = await InsertAsync(item);
+
+            Dictionary<string, string> data = new Dictionary<string, string>()
+            {
+                { "message", item.Text}
+            };
+            
+            GooglePushMessage message = new GooglePushMessage(data, TimeSpan.FromHours(1));
+
+            try
+            {
+                var result = await Services.Push.SendAsync(message);
+                Services.Log.Info(result.State.ToString());
+            }
+            catch (System.Exception ex)
+            {
+                Services.Log.Error(ex.Message, null, "Push.SendAsync Error");
+            }
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
