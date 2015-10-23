@@ -76,6 +76,9 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -90,7 +93,6 @@
     <Compile Include="LoginRequest.cs" />
     <Compile Include="CustomLoginResult.cs" />
     <Compile Include="RegistrationRequest.cs" />
-    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -118,5 +120,11 @@
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="GCMClient">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
