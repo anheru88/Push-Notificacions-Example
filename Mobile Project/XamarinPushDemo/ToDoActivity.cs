@@ -46,6 +46,11 @@ namespace XamarinPushDemo
 			client = new MobileServiceClient (AppConstant.applicationURL, AppConstant.applicationKey);
             await InitLocalStoreAsync();
 
+			user = new MobileServiceUser(Intent.GetStringExtra("UserID"));
+			user.MobileServiceAuthenticationToken = Intent.GetStringExtra("UserToken");
+
+			client.CurrentUser = user;
+
             // Get the Mobile Service sync table instance to use
             toDoTable = client.GetSyncTable <ToDoItem> ();
 
